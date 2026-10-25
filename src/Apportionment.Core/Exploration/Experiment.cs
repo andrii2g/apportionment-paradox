@@ -50,6 +50,7 @@ public static class Experiment
         foreach (var distribution in distributions)
         {
             cancellationToken.ThrowIfCancellationRequested();
+            if (configurations == maxConfigurations) return Summary(completed: false);
             var groups = Problem.Validate(distribution, fromHouse);
             var started = false;
             for (var methodIndex = 0; methodIndex < strategies.Length; methodIndex++)

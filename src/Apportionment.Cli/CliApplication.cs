@@ -1,5 +1,7 @@
 using System.Globalization;
 using System.Numerics;
+using System.Text;
+using Apportionment.Cli.Rendering;
 using Apportionment.Core;
 using Apportionment.Core.Exploration;
 using Apportionment.Core.Methods;
@@ -18,6 +20,7 @@ public static class CliApplication
                 output.WriteLine("allocate --populations 5,3,1 --seats 4 --method all");
                 output.WriteLine("sweep --populations 5,3,1 --from 1 --to 30 --method all");
                 output.WriteLine("search --groups 3 --max-population 12 --from 1 --to 30 --method all");
+                output.WriteLine("visualize --populations 5,3,1 --seats 4 --output artifacts/example.svg --method all");
                 output.WriteLine("Exploration options: --max-configurations 100000 --examples 10 (search only).");
                 output.WriteLine("Methods: hamilton, jefferson, webster, all (default: all).");
                 output.WriteLine("Exact ties favor the first input group. No minimum-seat guarantee.");
@@ -37,6 +40,9 @@ public static class CliApplication
                 case "sweep":
                 case "search":
                     Explore(args[0], options, output, cancellationToken);
+                    break;
+                case "visualize":
+                    Visualize(options, output, cancellationToken);
                     break;
                 default:
                     throw new ArgumentException($"Unknown command '{args[0]}'. Use --help.");
@@ -105,6 +111,23 @@ public static class CliApplication
         var losses = string.Join(", ", transition.Losses.Select(l => FormattableString.Invariant($"{l.GroupId}: {l.Before}->{l.After} (-{l.SeatsLost})")));
         output.WriteLine(FormattableString.Invariant(
             $"PARADOX {transition.Before.Method} populations=[{populations}] H={transition.Before.HouseSize}->{transition.After.HouseSize}: {losses}"));
+    }
+
+    private static void Visualize(Options options, TextWriter output, CancellationToken cancellationToken)
+    {
+        options.Allow("populations", "seats", "method", "output");
+        var groups = options.Populations();
+        var house = options.Integer("seats", 0, 99_999);
+        var path = Path.GetFullPath(options.Required("output"));
+        if (!string.Equals(Path.GetExtension(path), ".svg", StringComparison.OrdinalIgnoreCase))
+            throw new ArgumentException("--output must have an .svg extension.");
+        var comparisons = SelectMethods(options.Optional("method", "all")).Select(method => new ParadoxTransition(
+            method.Allocate(groups, house, cancellationToken), method.Allocate(groups, house + 1, cancellationToken))).ToArray();
+        var svg = AllocationComparisonSvg.Render(comparisons);
+        cancellationToken.ThrowIfCancellationRequested();
+        Directory.CreateDirectory(Path.GetDirectoryName(path)!);
+        File.WriteAllText(path, svg, new UTF8Encoding(encoderShouldEmitUTF8Identifier: false));
+        output.WriteLine($"SVG written: {path}");
     }
 
     internal static void WriteAllocation(TextWriter output, Allocation allocation)

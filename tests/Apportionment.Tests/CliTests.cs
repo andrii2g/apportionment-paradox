@@ -15,6 +15,8 @@ public class CliTests
     }
 
     [Theory]
+    [InlineData("visualize --populations 5,3,1 --seats 4 --output example.txt")]
+    [InlineData("visualize --populations 5,3,1 --seats 100000 --output example.svg")]
     [InlineData("sweep --populations 5,3,1 --from 5 --to 4")]
     [InlineData("search --groups 0 --max-population 5 --from 1 --to 5")]
     [InlineData("search --groups 3 --max-population 5 --from 1 --to 5 --max-configurations 0")]
@@ -46,5 +48,19 @@ public class CliTests
         Assert.Contains("Allocation configurations examined: 5", output.ToString());
         Assert.DoesNotContain("PARADOX", output.ToString());
         Assert.Empty(error.ToString());
+    }
+
+    [Fact]
+    public void MethodSelectionAndCancellationHaveExplicitResults()
+    {
+        using var output = new StringWriter();
+        using var error = new StringWriter();
+        var args = "allocate --populations 5,3,1 --seats 4 --method webster".Split(' ');
+        Assert.Equal(0, CliApplication.Run(args, output, error));
+        Assert.Contains("Webster: H=4", output.ToString());
+        Assert.DoesNotContain("Hamilton:", output.ToString());
+        Assert.DoesNotContain("Jefferson:", output.ToString());
+        Assert.Equal(130, CliApplication.Run(args, output, error, new CancellationToken(true)));
+        Assert.Equal("Cancelled.", error.ToString().Trim());
     }
 }

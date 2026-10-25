@@ -1,0 +1,197 @@
+<svg width="1200" height="1072" viewBox="0 0 1200 1072" role="img" aria-labelledby="title description" font-family="Segoe UI, Arial, sans-serif" xmlns="http://www.w3.org/2000/svg">
+  <title id="title">Apportionment: one extra seat</title>
+  <desc id="description">Consecutive house sizes compared using exact allocation arithmetic. Red bars and explicit loss labels identify groups losing seats. Ties favor original input order.</desc>
+  <rect x="0" y="0" width="1200" height="1072" rx="0" fill="#f3f5fa" />
+  <text x="32" y="48" font-size="30" fill="#17243c" font-weight="700">One extra seat. An unexpected loss.</text>
+  <text x="32" y="80" font-size="16" fill="#56627a" font-weight="400">Hamilton, Jefferson, Webster · exact quotas · deterministic input-order ties</text>
+  <text x="32" y="113" font-size="14" fill="#56627a" font-weight="400">House 4 → 5   |   Shared bar scale: 0–3 seats   |   Red + loss labels = fewer seats</text>
+  <g data-method="Hamilton">
+    <rect x="32" y="152" width="1136" height="274" rx="14" fill="#ffffff" />
+    <text x="56" y="182" font-size="21" fill="#17243c" font-weight="700">Hamilton</text>
+    <text x="650" y="182" font-size="14" fill="#bc3048" font-weight="600">1 group(s) lose seats</text>
+    <text x="56" y="210" font-size="12" fill="#56627a" font-weight="600">BEFORE · 4 seats</text>
+    <text x="650" y="210" font-size="12" fill="#56627a" font-weight="600">AFTER · 5 seats</text>
+    <line x1="600" x2="600" y1="200" y2="408" stroke="#e5e9f2" />
+    <g>
+      <title>G1; population 5; exact quota 20/9; seats 2; deviation -2/9</title>
+      <text x="56" y="240" font-size="14" fill="#17243c" font-weight="600">G1</text>
+      <text x="56" y="260" font-size="11" fill="#56627a" font-weight="400">p=5</text>
+      <rect x="146" y="228" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="146" y="228" width="200" height="16" rx="3" fill="#315cce" />
+      <text x="454" y="241" font-size="15" fill="#315cce" font-weight="700">2</text>
+      <text x="146" y="261" font-size="11" fill="#56627a" font-weight="400">quota 20/9 ≈ 2.22</text>
+    </g>
+    <g>
+      <title>G1; population 5; exact quota 25/9; seats 3; deviation 2/9</title>
+      <text x="650" y="240" font-size="14" fill="#17243c" font-weight="600">G1</text>
+      <text x="650" y="260" font-size="11" fill="#56627a" font-weight="400">p=5</text>
+      <rect x="740" y="228" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="740" y="228" width="300" height="16" rx="3" fill="#315cce" />
+      <text x="1048" y="241" font-size="15" fill="#315cce" font-weight="700">3</text>
+      <text x="740" y="261" font-size="11" fill="#56627a" font-weight="400">quota 25/9 ≈ 2.78</text>
+    </g>
+    <g>
+      <title>G2; population 3; exact quota 4/3; seats 1; deviation -1/3</title>
+      <text x="56" y="298" font-size="14" fill="#17243c" font-weight="600">G2</text>
+      <text x="56" y="318" font-size="11" fill="#56627a" font-weight="400">p=3</text>
+      <rect x="146" y="286" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="146" y="286" width="100" height="16" rx="3" fill="#008475" />
+      <text x="454" y="299" font-size="15" fill="#008475" font-weight="700">1</text>
+      <text x="146" y="319" font-size="11" fill="#56627a" font-weight="400">quota 4/3 ≈ 1.33</text>
+    </g>
+    <g>
+      <title>G2; population 3; exact quota 5/3; seats 2; deviation 1/3</title>
+      <text x="650" y="298" font-size="14" fill="#17243c" font-weight="600">G2</text>
+      <text x="650" y="318" font-size="11" fill="#56627a" font-weight="400">p=3</text>
+      <rect x="740" y="286" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="740" y="286" width="200" height="16" rx="3" fill="#008475" />
+      <text x="1048" y="299" font-size="15" fill="#008475" font-weight="700">2</text>
+      <text x="740" y="319" font-size="11" fill="#56627a" font-weight="400">quota 5/3 ≈ 1.67</text>
+    </g>
+    <rect x="44" y="339" width="1112" height="51" rx="6" fill="#fff0f2" />
+    <g>
+      <title>G3; population 1; exact quota 4/9; seats 1; deviation 5/9</title>
+      <text x="56" y="356" font-size="14" fill="#17243c" font-weight="600">G3</text>
+      <text x="56" y="376" font-size="11" fill="#56627a" font-weight="400">p=1</text>
+      <rect x="146" y="344" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="146" y="344" width="100" height="16" rx="3" fill="#bc3048" />
+      <text x="454" y="357" font-size="15" fill="#bc3048" font-weight="700">1</text>
+      <text x="146" y="377" font-size="11" fill="#56627a" font-weight="400">quota 4/9 ≈ 0.44</text>
+    </g>
+    <g>
+      <title>G3; population 1; exact quota 5/9; seats 0; deviation -5/9</title>
+      <text x="650" y="356" font-size="14" fill="#17243c" font-weight="600">G3</text>
+      <text x="650" y="376" font-size="11" fill="#56627a" font-weight="400">p=1</text>
+      <rect x="740" y="344" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="740" y="344" width="0" height="16" rx="3" fill="#bc3048" />
+      <text x="1048" y="357" font-size="15" fill="#bc3048" font-weight="700">0</text>
+      <text x="740" y="377" font-size="11" fill="#56627a" font-weight="400">quota 5/9 ≈ 0.56</text>
+    </g>
+    <text x="987" y="377" font-size="12" fill="#bc3048" font-weight="700">1 → 0 (−1)</text>
+  </g>
+  <g data-method="Jefferson">
+    <rect x="32" y="446" width="1136" height="274" rx="14" fill="#ffffff" />
+    <text x="56" y="476" font-size="21" fill="#17243c" font-weight="700">Jefferson</text>
+    <text x="650" y="476" font-size="14" fill="#008475" font-weight="600">No seat losses in this transition</text>
+    <text x="56" y="504" font-size="12" fill="#56627a" font-weight="600">BEFORE · 4 seats</text>
+    <text x="650" y="504" font-size="12" fill="#56627a" font-weight="600">AFTER · 5 seats</text>
+    <line x1="600" x2="600" y1="494" y2="702" stroke="#e5e9f2" />
+    <g>
+      <title>G1; population 5; exact quota 20/9; seats 3; deviation 7/9</title>
+      <text x="56" y="534" font-size="14" fill="#17243c" font-weight="600">G1</text>
+      <text x="56" y="554" font-size="11" fill="#56627a" font-weight="400">p=5</text>
+      <rect x="146" y="522" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="146" y="522" width="300" height="16" rx="3" fill="#315cce" />
+      <text x="454" y="535" font-size="15" fill="#315cce" font-weight="700">3</text>
+      <text x="146" y="555" font-size="11" fill="#56627a" font-weight="400">quota 20/9 ≈ 2.22</text>
+    </g>
+    <g>
+      <title>G1; population 5; exact quota 25/9; seats 3; deviation 2/9</title>
+      <text x="650" y="534" font-size="14" fill="#17243c" font-weight="600">G1</text>
+      <text x="650" y="554" font-size="11" fill="#56627a" font-weight="400">p=5</text>
+      <rect x="740" y="522" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="740" y="522" width="300" height="16" rx="3" fill="#315cce" />
+      <text x="1048" y="535" font-size="15" fill="#315cce" font-weight="700">3</text>
+      <text x="740" y="555" font-size="11" fill="#56627a" font-weight="400">quota 25/9 ≈ 2.78</text>
+    </g>
+    <g>
+      <title>G2; population 3; exact quota 4/3; seats 1; deviation -1/3</title>
+      <text x="56" y="592" font-size="14" fill="#17243c" font-weight="600">G2</text>
+      <text x="56" y="612" font-size="11" fill="#56627a" font-weight="400">p=3</text>
+      <rect x="146" y="580" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="146" y="580" width="100" height="16" rx="3" fill="#008475" />
+      <text x="454" y="593" font-size="15" fill="#008475" font-weight="700">1</text>
+      <text x="146" y="613" font-size="11" fill="#56627a" font-weight="400">quota 4/3 ≈ 1.33</text>
+    </g>
+    <g>
+      <title>G2; population 3; exact quota 5/3; seats 2; deviation 1/3</title>
+      <text x="650" y="592" font-size="14" fill="#17243c" font-weight="600">G2</text>
+      <text x="650" y="612" font-size="11" fill="#56627a" font-weight="400">p=3</text>
+      <rect x="740" y="580" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="740" y="580" width="200" height="16" rx="3" fill="#008475" />
+      <text x="1048" y="593" font-size="15" fill="#008475" font-weight="700">2</text>
+      <text x="740" y="613" font-size="11" fill="#56627a" font-weight="400">quota 5/3 ≈ 1.67</text>
+    </g>
+    <g>
+      <title>G3; population 1; exact quota 4/9; seats 0; deviation -4/9</title>
+      <text x="56" y="650" font-size="14" fill="#17243c" font-weight="600">G3</text>
+      <text x="56" y="670" font-size="11" fill="#56627a" font-weight="400">p=1</text>
+      <rect x="146" y="638" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="146" y="638" width="0" height="16" rx="3" fill="#7952b3" />
+      <text x="454" y="651" font-size="15" fill="#7952b3" font-weight="700">0</text>
+      <text x="146" y="671" font-size="11" fill="#56627a" font-weight="400">quota 4/9 ≈ 0.44</text>
+    </g>
+    <g>
+      <title>G3; population 1; exact quota 5/9; seats 0; deviation -5/9</title>
+      <text x="650" y="650" font-size="14" fill="#17243c" font-weight="600">G3</text>
+      <text x="650" y="670" font-size="11" fill="#56627a" font-weight="400">p=1</text>
+      <rect x="740" y="638" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="740" y="638" width="0" height="16" rx="3" fill="#7952b3" />
+      <text x="1048" y="651" font-size="15" fill="#7952b3" font-weight="700">0</text>
+      <text x="740" y="671" font-size="11" fill="#56627a" font-weight="400">quota 5/9 ≈ 0.56</text>
+    </g>
+  </g>
+  <g data-method="Webster">
+    <rect x="32" y="740" width="1136" height="274" rx="14" fill="#ffffff" />
+    <text x="56" y="770" font-size="21" fill="#17243c" font-weight="700">Webster</text>
+    <text x="650" y="770" font-size="14" fill="#008475" font-weight="600">No seat losses in this transition</text>
+    <text x="56" y="798" font-size="12" fill="#56627a" font-weight="600">BEFORE · 4 seats</text>
+    <text x="650" y="798" font-size="12" fill="#56627a" font-weight="600">AFTER · 5 seats</text>
+    <line x1="600" x2="600" y1="788" y2="996" stroke="#e5e9f2" />
+    <g>
+      <title>G1; population 5; exact quota 20/9; seats 3; deviation 7/9</title>
+      <text x="56" y="828" font-size="14" fill="#17243c" font-weight="600">G1</text>
+      <text x="56" y="848" font-size="11" fill="#56627a" font-weight="400">p=5</text>
+      <rect x="146" y="816" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="146" y="816" width="300" height="16" rx="3" fill="#315cce" />
+      <text x="454" y="829" font-size="15" fill="#315cce" font-weight="700">3</text>
+      <text x="146" y="849" font-size="11" fill="#56627a" font-weight="400">quota 20/9 ≈ 2.22</text>
+    </g>
+    <g>
+      <title>G1; population 5; exact quota 25/9; seats 3; deviation 2/9</title>
+      <text x="650" y="828" font-size="14" fill="#17243c" font-weight="600">G1</text>
+      <text x="650" y="848" font-size="11" fill="#56627a" font-weight="400">p=5</text>
+      <rect x="740" y="816" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="740" y="816" width="300" height="16" rx="3" fill="#315cce" />
+      <text x="1048" y="829" font-size="15" fill="#315cce" font-weight="700">3</text>
+      <text x="740" y="849" font-size="11" fill="#56627a" font-weight="400">quota 25/9 ≈ 2.78</text>
+    </g>
+    <g>
+      <title>G2; population 3; exact quota 4/3; seats 1; deviation -1/3</title>
+      <text x="56" y="886" font-size="14" fill="#17243c" font-weight="600">G2</text>
+      <text x="56" y="906" font-size="11" fill="#56627a" font-weight="400">p=3</text>
+      <rect x="146" y="874" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="146" y="874" width="100" height="16" rx="3" fill="#008475" />
+      <text x="454" y="887" font-size="15" fill="#008475" font-weight="700">1</text>
+      <text x="146" y="907" font-size="11" fill="#56627a" font-weight="400">quota 4/3 ≈ 1.33</text>
+    </g>
+    <g>
+      <title>G2; population 3; exact quota 5/3; seats 2; deviation 1/3</title>
+      <text x="650" y="886" font-size="14" fill="#17243c" font-weight="600">G2</text>
+      <text x="650" y="906" font-size="11" fill="#56627a" font-weight="400">p=3</text>
+      <rect x="740" y="874" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="740" y="874" width="200" height="16" rx="3" fill="#008475" />
+      <text x="1048" y="887" font-size="15" fill="#008475" font-weight="700">2</text>
+      <text x="740" y="907" font-size="11" fill="#56627a" font-weight="400">quota 5/3 ≈ 1.67</text>
+    </g>
+    <g>
+      <title>G3; population 1; exact quota 4/9; seats 0; deviation -4/9</title>
+      <text x="56" y="944" font-size="14" fill="#17243c" font-weight="600">G3</text>
+      <text x="56" y="964" font-size="11" fill="#56627a" font-weight="400">p=1</text>
+      <rect x="146" y="932" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="146" y="932" width="0" height="16" rx="3" fill="#7952b3" />
+      <text x="454" y="945" font-size="15" fill="#7952b3" font-weight="700">0</text>
+      <text x="146" y="965" font-size="11" fill="#56627a" font-weight="400">quota 4/9 ≈ 0.44</text>
+    </g>
+    <g>
+      <title>G3; population 1; exact quota 5/9; seats 0; deviation -5/9</title>
+      <text x="650" y="944" font-size="14" fill="#17243c" font-weight="600">G3</text>
+      <text x="650" y="964" font-size="11" fill="#56627a" font-weight="400">p=1</text>
+      <rect x="740" y="932" width="300" height="16" rx="3" fill="#e9edf5" />
+      <rect x="740" y="932" width="0" height="16" rx="3" fill="#7952b3" />
+      <text x="1048" y="945" font-size="15" fill="#7952b3" font-weight="700">0</text>
+      <text x="740" y="965" font-size="11" fill="#56627a" font-weight="400">quota 5/9 ≈ 0.56</text>
+    </g>
+  </g>
+  <text x="32" y="1052" font-size="12" fill="#56627a" font-weight="400">Populations are fixed. Quotas = house × population / total. No minimum-seat guarantee. Hover rows for full values.</text>
+</svg>

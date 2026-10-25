@@ -86,6 +86,12 @@ public class ExplorationTests
         var exact = Experiment.Run([HamiltonTests.Groups(1)], AllMethods(), 0, 0, maxConfigurations: 3);
         Assert.True(exact.Completed);
         Assert.Equal(0, exact.TransitionsExamined);
+
+        // Exhausting the budget must not validate an unexamined distribution.
+        var boundary = Experiment.Run([HamiltonTests.Groups(1), HamiltonTests.Groups(-1)],
+            [new HamiltonMethod()], 0, 0, maxConfigurations: 1);
+        Assert.False(boundary.Completed);
+        Assert.Equal(1, boundary.DistributionsExamined);
     }
 
     [Fact]
