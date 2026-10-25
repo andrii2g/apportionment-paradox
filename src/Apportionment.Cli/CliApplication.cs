@@ -14,7 +14,8 @@ public static class CliApplication
             if (args.Length == 0 || args is ["--help"] or ["help"])
             {
                 output.WriteLine("Apportionment Paradox — exact proportional allocation");
-                output.WriteLine("allocate --populations 5,3,1 --seats 4 --method hamilton");
+                output.WriteLine("allocate --populations 5,3,1 --seats 4 --method all");
+                output.WriteLine("Methods: hamilton, jefferson, webster, all (default: all).");
                 output.WriteLine("Exact ties favor the first input group. No minimum-seat guarantee.");
                 return 0;
             }
@@ -25,10 +26,8 @@ public static class CliApplication
             options.Allow("populations", "seats", "method");
             var groups = options.Populations();
             var house = options.Integer("seats", 0, 100_000);
-            var method = options.Optional("method", "hamilton");
-            if (method is not ("hamilton" or "all"))
-                throw new ArgumentException("Method must be hamilton or all.");
-            WriteAllocation(output, new HamiltonMethod().Allocate(groups, house, cancellationToken));
+            foreach (var method in SelectMethods(options.Optional("method", "all")))
+                WriteAllocation(output, method.Allocate(groups, house, cancellationToken));
             return 0;
         }
         catch (OperationCanceledException)
@@ -42,6 +41,15 @@ public static class CliApplication
             return 2;
         }
     }
+
+    internal static IApportionmentMethod[] SelectMethods(string name) => name switch
+    {
+        "hamilton" => [new HamiltonMethod()],
+        "jefferson" => [new JeffersonMethod()],
+        "webster" => [new WebsterMethod()],
+        "all" => [new HamiltonMethod(), new JeffersonMethod(), new WebsterMethod()],
+        _ => throw new ArgumentException("Method must be hamilton, jefferson, webster, or all.")
+    };
 
     internal static void WriteAllocation(TextWriter output, Allocation allocation)
     {

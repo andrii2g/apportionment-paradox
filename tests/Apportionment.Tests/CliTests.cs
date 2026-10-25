@@ -15,6 +15,7 @@ public class CliTests
     }
 
     [Theory]
+    [InlineData("allocate --populations 1 --seats 4 --method unknown")]
     [InlineData("allocate --populations 0,0 --seats 4")]
     [InlineData("allocate --populations 1 --seats -1")]
     [InlineData("allocate --populations 1 --seats 4 --oops x")]
